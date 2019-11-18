@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:.github/workflows/push.yml
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses:.github/workflows/push.yml
+    - name:.github/workflows/push.yml
+      run: echo Hello, world!
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
